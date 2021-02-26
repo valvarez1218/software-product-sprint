@@ -15,11 +15,11 @@
 /**
  * Adds a random greeting to the page.
  */
-function addRandomGreeting() {
+function addRandomFact() {
   const facts =
       ['Born December 18, 2000', 'Youngest of three!', 'Likes to watch anime!', 'Black belt in Karate!'];
 
-  // Pick a random greeting.
+  // Pick a random fact.
   const fact = facts[Math.floor(Math.random() * facts.length)];
 
   // Add it to the page.
