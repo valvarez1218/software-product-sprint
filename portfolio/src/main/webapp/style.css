@@ -10,50 +10,59 @@
   margin-top: 20px;
 }
 
+img {
+    border-radius: 50%;
+    display: block; 
+    height: 50%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 50%; 
+}
+
 .active {
     background-color: #008080;
 }
 
 ul {
+    background-color: black;
     list-style-type: none;
     margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: black;
     opacity: 30;
+    overflow: hidden;
+    padding: 0;
 }
 
 li {
-    width: 50%;
     float: left;
+    width: 50%;
 }
 
 li a {
-    display: block;
     color: white;
-    text-align: center;
+    display: block;
     padding: 14px 16px;
+    text-align: center;
     text-decoration: none;
 }
 
 li a:hover {
-    text-decoration: underline;
-    color: black;
     background-color: #c0c0c0;
+    color: black;
+    text-decoration: underline;
 }
 
 td {
-    text-align: center;
     padding: 5px;
+    text-align: center;
 }
 
 .fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 60px;
     border-radius: 25%;
-    text-decoration: none;
+    font-size: 30px;
     margin: 5px 2px;
+    padding: 20px;
+    text-decoration: none;
+    width: 60px;
 }
 
 .fa-google {
@@ -62,8 +71,8 @@ td {
 }
 
 .fa-google:hover {
-    opacity: 0.5;
     color: white;
+    opacity: 0.5;
     text-decoration: none;
 }
 
@@ -73,18 +82,18 @@ td {
 }
 
 .fa-linkedin:hover {
-    opacity: 0.5;
     color: white;
+    opacity: 0.5;
     text-decoration: none;
 }
 
 .fa-github {
-    color: white;
     background: black;
+    color: white;
 }
 
 .fa-github:hover {
-    opacity: 0.50;
     color: white;
+    opacity: 0.50;
     text-decoration: none;
 }
