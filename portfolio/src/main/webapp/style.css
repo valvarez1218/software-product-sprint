@@ -10,6 +10,11 @@
   margin-top: 20px;
 }
 
+p {
+    font-family: "Brush Script MT";
+    font-size: 18px; 
+}
+
 img {
     border-radius: 50%;
     display: block; 
