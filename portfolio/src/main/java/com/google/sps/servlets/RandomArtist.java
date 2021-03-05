@@ -9,7 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/** Handles requests sent to the /hello URL. Try running a server and navigating to /hello! */
+/** Handles requests sent to the /artist URL. Returns a random artist to be displayed on
+ *       webpage
+ */
 @WebServlet("/artist")
 public class RandomArtist extends HttpServlet {
 
