@@ -27,7 +27,7 @@ function addRandomFact() {
   factContainer.innerText = fact;
 }
 
-async function getContent() {
+async function getArtist() {
     const responseFromServer = await fetch('/hello');
     const textResponse = await responseFromServer.text();
 
