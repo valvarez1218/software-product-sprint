@@ -28,9 +28,11 @@ function addRandomFact() {
 }
 
 async function getArtist() {
-    const responseFromServer = await fetch('/hello');
-    const textResponse = await responseFromServer.text();
+    const responseFromServer = await fetch('/artist');
+    const textResponse = await responseFromServer.json();
 
-    const contentContainer = document.getElementById('content-container');
-    contentContainer.innerText = textResponse;
+    console.log(textResponse.selectedArtist);
+
+    const artistContainer = document.getElementById('artist-container');
+    artistContainer.innerText = textResponse.selectedArtist;
 }
