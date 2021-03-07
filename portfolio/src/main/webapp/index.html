@@ -50,6 +50,16 @@
               <td><a href="https://github.com/valvarez1218" class="fa fa-github"></a></td>
           </tr>
       </table>
+
+      <form action="/form-handler" method="POST">
+        <p>Enter any comments or suggestions below!</p>
+        <input name="comment-suggestion" placeholder="Enter Comment/Suggestion">
+        <br/>
+        <button type="submit" onclick="thankUser();">Submit</button>
+      </form>
+
+      <!-- Eventually would like to post thank you message to user -->
+      <!-- <p id="thanks-text"></p> -->
     </div>
 
   </body>
