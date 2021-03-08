@@ -25,8 +25,8 @@ public class RandomArtist extends HttpServlet {
               add("The Weeknd");
               add("Anderson .Paak");
               add("Hozier");
-              add("Daniel Caeasr");
-              add("Jacon Collier");
+              add("Daniel Caesar");
+              add("Jacob Collier");
               add("The Strokes");
               add("Mana");
               add("Lola Club");
