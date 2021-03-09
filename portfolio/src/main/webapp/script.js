@@ -38,9 +38,8 @@ async function getArtist() {
 }
 
 
-// Eventually would like to use some type of boolean to show
+// TODO: Eventually would like to use some type of boolean to show
 //  that user submitted a comment and in return say thank you
-
 // function thankUser() {
 //     const responseFromServer = await fetch('/form-handler');
 

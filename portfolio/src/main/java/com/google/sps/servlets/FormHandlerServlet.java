@@ -21,11 +21,9 @@ public class FormHandlerServlet extends HttpServlet {
     // Say thank you to the user for their contribution
     response.setContentType("text/html;");
     
-    // Not currently implemented but would like to acknowledge user
+    //TODO: Not currently implemented but would like to acknowledge user
     //  for submitting a comment
     // response.getWriter().println("Thank you for your input!");
-    
-    
     response.sendRedirect("index.html");
   }
 }
