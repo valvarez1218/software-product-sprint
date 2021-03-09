@@ -36,3 +36,13 @@ async function getArtist() {
     const artistContainer = document.getElementById('artist-container');
     artistContainer.innerText = textResponse.selectedArtist;
 }
+
+
+// TODO: Eventually would like to use some type of boolean to show
+//  that user submitted a comment and in return say thank you
+// function thankUser() {
+//     const responseFromServer = await fetch('/form-handler');
+
+//     const thanksContainer = document.getElementById('thanks-text');
+//     thanksContainer.innerText = responseFromServer;
+// }
