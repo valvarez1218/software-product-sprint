@@ -9,7 +9,7 @@
 
   <body>
     <!-- Navigation bar from W3schools.com -->
-     <ul>
+     <ul class="navbar">
         <li class="active"><a href="index.html">About Me</a></li>
         <li><a href="resume.html">Resume</a></li>
     </ul>
@@ -53,13 +53,17 @@
 
       <form action="/form-handler" method="POST">
         <p>Enter any comments or suggestions below!</p>
+        <!-- TODO: Will eventually add ability to input title comment -->
+        <!-- <input name="title" placeholder="Enter a title"> <br/> -->
+        <!-- <textarea name="comment-suggestion" placeholder="Enter Comment/Suggestion"></textarea> -->
+
         <input name="comment-suggestion" placeholder="Enter Comment/Suggestion">
         <br/>
-        <button type="submit" onclick="thankUser();">Submit</button>
+        <button type="submit">Submit</button>
       </form>
 
-      <!-- TODO: Eventually would like to post thank you message to user -->
-      <!-- <p id="thanks-text"></p> -->
+      <a href="comments.html">View other comments here!</a>
+
     </div>
 
   </body>

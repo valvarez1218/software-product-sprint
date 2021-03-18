@@ -37,12 +37,23 @@ async function getArtist() {
     artistContainer.innerText = textResponse.selectedArtist;
 }
 
+function loadComments() {
+  fetch('/view-comments').then(response => response.json()).then((comments) => {
+    const commentElement = document.getElementById('comment-list');
+    comments.forEach((comment) => {
+      console.log(comment.message);
+      commentElement.appendChild(createCommentElement(comment));
+    })
+  });
+}
 
-// TODO: Eventually would like to use some type of boolean to show
-//  that user submitted a comment and in return say thank you
-// function thankUser() {
-//     const responseFromServer = await fetch('/form-handler');
+function createCommentElement (comment) {
+    const commentElement = document.createElement('li');
+    commentElement.className = "comment";
 
-//     const thanksContainer = document.getElementById('thanks-text');
-//     thanksContainer.innerText = responseFromServer;
-// }
+    const content = document.createElement('span');
+    content.innerText = comment.message;
+
+    commentElement.appendChild(content);
+    return commentElement;
+}
