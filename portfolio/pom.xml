@@ -39,6 +39,12 @@
       <version>${jetty.version}</version>
     </dependency>
 
+    <dependency>
+        <groupId>com.google.cloud</groupId>
+        <artifactId>google-cloud-datastore</artifactId>
+        <version>1.104.0</version>
+    </dependency>
+
     <!-- Gson dependency -->
     <!-- Ended up not using gson, commented out in case of future use -->
     <!-- <dependency>
