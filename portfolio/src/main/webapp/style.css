@@ -28,7 +28,17 @@ img {
     background-color: #008080;
 }
 
-ul {
+.card {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.comment-list {
+    list-style-type: none;
+}
+
+.navbar {
     background-color: black;
     list-style-type: none;
     margin: 0;

@@ -26,3 +26,40 @@ function addRandomFact() {
   const factContainer = document.getElementById('fact-container');
   factContainer.innerText = fact;
 }
+
+async function getArtist() {
+    const responseFromServer = await fetch('/artist');
+    const textResponse = await responseFromServer.json();
+
+    console.log(textResponse.selectedArtist);
+
+    const artistContainer = document.getElementById('artist-container');
+    artistContainer.innerText = textResponse.selectedArtist;
+}
+
+function loadComments() {
+  fetch('/view-comments').then(response => response.json()).then((comments) => {
+    const commentElementList = document.getElementById('comment-list');
+    comments.forEach((comment) => {
+      console.log(comment.message);
+      commentElementList.appendChild(createCommentElement(comment));
+    })
+  });
+}
+
+function createCommentElement (comment) {
+    const commentElement = document.createElement('div');
+    commentElement.className = "card";
+
+    const title = document.createElement('h5');
+    title.className = "card-title";
+    title.innerText = comment.title;
+
+    const content = document.createElement('p');
+    content.className = "card-text";
+    content.innerText = comment.message;
+
+    commentElement.appendChild(title);
+    commentElement.appendChild(content);
+    return commentElement;
+}
