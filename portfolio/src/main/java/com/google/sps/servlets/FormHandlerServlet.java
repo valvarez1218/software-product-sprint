@@ -1,5 +1,14 @@
 package com.google.sps.servlets;
 
+// Packages required for datastore functionality
+import com.google.cloud.datastore.Datastore;
+import com.google.cloud.datastore.DatastoreOptions;
+import com.google.cloud.datastore.Entity;
+import com.google.cloud.datastore.FullEntity;
+import com.google.cloud.datastore.KeyFactory;
+
+import org.apache.http.client.entity.EntityBuilder;
+
 import java.io.IOException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,18 +21,24 @@ public class FormHandlerServlet extends HttpServlet {
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
-    // Get the comment/suggestion from the form.
-    String textValue = request.getParameter("comment-suggestion");
+    // Get the comment/suggestion from the form and a timestamp
+    String message = request.getParameter("comment-suggestion");
+    long timestamp = System.currentTimeMillis();
 
     // Print the value so you can see it in the server logs.
-    System.out.println(textValue);
+    System.out.println(message);
 
-    // Say thank you to the user for their contribution
-    response.setContentType("text/html;");
+
+    // Input commment with timestamp into database
+    Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
+    KeyFactory keyFactory = datastore.newKeyFactory().setKind("comment");
+    FullEntity commentEntity = 
+        Entity.newBuilder(keyFactory.newKey())
+            .set("message", message)
+            .set("time", timestamp)
+            .build();
+    datastore.put(commentEntity);
     
-    //TODO: Not currently implemented but would like to acknowledge user
-    //  for submitting a comment
-    // response.getWriter().println("Thank you for your input!");
     response.sendRedirect("index.html");
   }
 }
