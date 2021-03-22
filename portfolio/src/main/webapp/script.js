@@ -63,3 +63,4 @@ function createCommentElement (comment) {
     commentElement.appendChild(content);
     return commentElement;
 }
+
