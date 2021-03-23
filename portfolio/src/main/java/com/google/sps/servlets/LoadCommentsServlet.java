@@ -31,12 +31,13 @@ public class LoadCommentsServlet extends HttpServlet {
         while (results.hasNext()) {
             Entity entity = results.next();
             
+            String title = entity.getString("title");
             String message = entity.getString("message");
             long id = entity.getKey().getId();
             long timestamp = entity.getLong("time");
 
-            Comment comment = new Comment(id, message, timestamp);
 
+            Comment comment = new Comment(id, title, message, timestamp);
             comments.add(comment);
         }
 

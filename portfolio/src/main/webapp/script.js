@@ -39,21 +39,28 @@ async function getArtist() {
 
 function loadComments() {
   fetch('/view-comments').then(response => response.json()).then((comments) => {
-    const commentElement = document.getElementById('comment-list');
+    const commentElementList = document.getElementById('comment-list');
     comments.forEach((comment) => {
       console.log(comment.message);
-      commentElement.appendChild(createCommentElement(comment));
+      commentElementList.appendChild(createCommentElement(comment));
     })
   });
 }
 
 function createCommentElement (comment) {
-    const commentElement = document.createElement('li');
-    commentElement.className = "comment";
+    const commentElement = document.createElement('div');
+    commentElement.className = "card";
 
-    const content = document.createElement('span');
+    const title = document.createElement('h5');
+    title.className = "card-title";
+    title.innerText = comment.title;
+
+    const content = document.createElement('p');
+    content.className = "card-text";
     content.innerText = comment.message;
 
+    commentElement.appendChild(title);
     commentElement.appendChild(content);
     return commentElement;
 }
+
