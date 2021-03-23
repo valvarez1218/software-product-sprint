@@ -9,7 +9,7 @@
 
   <body>
     <!-- Navigation bar from W3schools.com -->
-     <ul>
+     <ul class="navbar">
         <li class="active"><a href="index.html">About Me</a></li>
         <li><a href="resume.html">Resume</a></li>
     </ul>
@@ -19,6 +19,8 @@
 
       <img src="/images/promPhoto.jpeg" alt="image of myself" />
       
+
+      <!-- Description of self in third person -->
       <p>Victor Alvarez is a student of Harvard College, class of 2023. He is pursuing a double major in computer science and mathematics.
         Although there is no clear plan, he knows he wants a career where he will apply his skills and continue to learn about both of these
         fields. <br/> 
@@ -26,10 +28,14 @@
         Aside from the few activities named, Victor is willing to try new things as he's always ready to find a new interest!
       </p>
 
-      <!-- Commented out line below; unsure if we'll need it later -->
-      <!-- <p>Click <a href="/hello">here</a> to see content created by server code.</p> -->
+        <!-- Select one of my favorite artists at random -->
+      <p>Click <button onclick="getArtist();">here</button> to see one of Victor's favorite artists!</p>
+      <p id="artist-container"></p>
       
-      <p>Click here to get a random fact about Victor: <button onclick="addRandomFact()">fact</button>   </p>
+      <p>Or click <a href="/artist">here</a> to see the content created by the server code directly.</p>
+     
+      <!-- Run javascript code to get a random fact -->
+      <p>Click here to get a random fact about Victor: <button onclick="addRandomFact()">fact</button></p>
       
       <div id="fact-container"></div>
       
@@ -51,11 +57,13 @@
         <input name="title" placeholder="Enter a title"> <br/>
         <textarea name="comment-suggestion" placeholder="Enter Comment/Suggestion"></textarea>
         <!-- <input name="comment-suggestion" placeholder="Enter Comment/Suggestion"> -->
+
         <br/>
         <button type="submit">Submit</button>
       </form>
 
       <a href="comments.html" style="margin-bottom: 30px;">View other comments here!</a>
+
 
     </div>
 

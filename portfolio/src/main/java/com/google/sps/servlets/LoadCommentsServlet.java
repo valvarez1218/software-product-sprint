@@ -36,8 +36,8 @@ public class LoadCommentsServlet extends HttpServlet {
             long id = entity.getKey().getId();
             long timestamp = entity.getLong("time");
 
-            Comment comment = new Comment(id, title, message, timestamp);
 
+            Comment comment = new Comment(id, title, message, timestamp);
             comments.add(comment);
         }
 

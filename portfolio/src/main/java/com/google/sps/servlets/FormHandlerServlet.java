@@ -24,10 +24,12 @@ public class FormHandlerServlet extends HttpServlet {
     // Get the comment/suggestion from the form and a timestamp
     String message = request.getParameter("comment-suggestion");
     String title = request.getParameter("title");
+
     long timestamp = System.currentTimeMillis();
 
     // Print the value so you can see it in the server logs.
     System.out.println(message);
+
 
     // Input commment with timestamp into database
     Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
